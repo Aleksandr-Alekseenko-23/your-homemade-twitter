@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/your-homemade-twitter/static/css/main.073c9b0a.css",
+    "main.js": "/your-homemade-twitter/static/js/main.d5e920c9.js",
+    "static/js/787.feee7e00.chunk.js": "/your-homemade-twitter/static/js/787.feee7e00.chunk.js",
+    "static/media/logo.svg": "/your-homemade-twitter/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/your-homemade-twitter/index.html",
+    "main.073c9b0a.css.map": "/your-homemade-twitter/static/css/main.073c9b0a.css.map",
+    "main.d5e920c9.js.map": "/your-homemade-twitter/static/js/main.d5e920c9.js.map",
+    "787.feee7e00.chunk.js.map": "/your-homemade-twitter/static/js/787.feee7e00.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.d5e920c9.js"
+  ]
+}
