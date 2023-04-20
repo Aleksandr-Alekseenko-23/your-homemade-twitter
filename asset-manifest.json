@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.js": "/your-homemade-twitter/static/js/main.cb752d3c.js",
+    "main.css": "/your-homemade-twitter/static/css/main.c2cab247.css",
+    "main.js": "/your-homemade-twitter/static/js/main.e3cd6cb1.js",
     "static/js/369.b8713397.chunk.js": "/your-homemade-twitter/static/js/369.b8713397.chunk.js",
-    "static/js/253.c87af487.chunk.js": "/your-homemade-twitter/static/js/253.c87af487.chunk.js",
-    "static/js/359.862f6e85.chunk.js": "/your-homemade-twitter/static/js/359.862f6e85.chunk.js",
+    "static/js/918.fe84f9d8.chunk.js": "/your-homemade-twitter/static/js/918.fe84f9d8.chunk.js",
+    "static/js/591.ad066594.chunk.js": "/your-homemade-twitter/static/js/591.ad066594.chunk.js",
     "static/media/pngwing.com.png": "/your-homemade-twitter/static/media/pngwing.com.86fb15bc94cddefed90a.png",
     "static/media/picture.png": "/your-homemade-twitter/static/media/picture.6d4c460313710584e880.png",
     "static/media/background.jpg": "/your-homemade-twitter/static/media/background.8db9b49f0f44bd045b78.jpg",
@@ -12,12 +13,14 @@
     "static/media/github.svg": "/your-homemade-twitter/static/media/github.2c7beffbfaf22e59e8f6b2f1b69ddd0b.svg",
     "index.html": "/your-homemade-twitter/index.html",
     "static/media/linkedin.svg": "/your-homemade-twitter/static/media/linkedin.0e77d333288bbfc0f3c0a9a4603b0925.svg",
-    "main.cb752d3c.js.map": "/your-homemade-twitter/static/js/main.cb752d3c.js.map",
+    "main.c2cab247.css.map": "/your-homemade-twitter/static/css/main.c2cab247.css.map",
+    "main.e3cd6cb1.js.map": "/your-homemade-twitter/static/js/main.e3cd6cb1.js.map",
     "369.b8713397.chunk.js.map": "/your-homemade-twitter/static/js/369.b8713397.chunk.js.map",
-    "253.c87af487.chunk.js.map": "/your-homemade-twitter/static/js/253.c87af487.chunk.js.map",
-    "359.862f6e85.chunk.js.map": "/your-homemade-twitter/static/js/359.862f6e85.chunk.js.map"
+    "918.fe84f9d8.chunk.js.map": "/your-homemade-twitter/static/js/918.fe84f9d8.chunk.js.map",
+    "591.ad066594.chunk.js.map": "/your-homemade-twitter/static/js/591.ad066594.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.cb752d3c.js"
+    "static/css/main.c2cab247.css",
+    "static/js/main.e3cd6cb1.js"
   ]
 }
