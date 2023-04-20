@@ -7,7 +7,7 @@ import Loader from "../../components/Common/Loader/Loader";
 import Button from "../../components/Common/Button/Button";
 import { useAppDispatch, useAppSelector } from "../../redux/hook";
 import {
-  selectUsers,
+  selectFilteredUsers,
   selectIsLoading,
   selectError,
   selectPage,
@@ -17,7 +17,7 @@ import { fetchUsers } from "../../redux/operations";
 import { Wrapper } from "./TweetsPage.styled";
 
 function TweetsPage() {
-  const users = useAppSelector(selectUsers);
+  const users = useAppSelector(selectFilteredUsers);
   const isLoading = useAppSelector(selectIsLoading);
   const error = useAppSelector(selectError);
   const currentPage = useAppSelector(selectPage);
