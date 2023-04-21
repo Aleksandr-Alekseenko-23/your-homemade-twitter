@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 
-export const ImageGoBack = styled.img`
-  width: 50px;
+export const ImageGoBack = styled(KeyboardDoubleArrowLeftIcon)`
+  color: rgb(92, 211, 168);
 `;
 
 export const Button = styled.button`

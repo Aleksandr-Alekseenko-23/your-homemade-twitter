@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Alert, AlertTitle } from "@mui/material";
 import UserList from "../../components/User/UserList/UserList";
 import Section from "../../components/Common/Section/Section";
@@ -15,8 +15,9 @@ import {
 } from "../../redux/selectors";
 import { fetchUsers } from "../../redux/operations";
 import { Wrapper } from "./TweetsPage.styled";
+import { incrementPage } from "../../redux/slice";
 
-function TweetsPage() {
+const TweetsPage: React.FC = () => {
   const users = useAppSelector(selectFilteredUsers);
   const isLoading = useAppSelector(selectIsLoading);
   const error = useAppSelector(selectError);
@@ -26,12 +27,12 @@ function TweetsPage() {
   const dispatch = useAppDispatch();
 
   const handleLoadMore = (): void => {
-    dispatch(fetchUsers({ page: currentPage + 1, limit: 9 }));
+    dispatch(incrementPage());
   };
 
   useEffect(() => {
-    dispatch(fetchUsers({ page: 1, limit: 9 }));
-  }, [dispatch]);
+    dispatch(fetchUsers({ page: currentPage, limit: 9 }));
+  }, [currentPage, dispatch]);
 
   return (
     <>
@@ -69,6 +70,6 @@ function TweetsPage() {
       </Section>
     </>
   );
-}
+};
 
 export default TweetsPage;

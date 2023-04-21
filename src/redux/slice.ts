@@ -7,7 +7,7 @@ const initialState: UserState = {
   filter: "all",
   isLoading: false,
   error: null,
-  page: 0,
+  page: 1,
   hasMore: true,
 };
 
@@ -17,6 +17,9 @@ export const userSlice = createSlice({
   reducers: {
     filterUsersByStatusSubscription(state, action: PayloadAction<Filter>) {
       state.filter = action.payload;
+    },
+    incrementPage(state) {
+      state.page++;
     },
   },
   extraReducers: (builder) => {
@@ -30,7 +33,6 @@ export const userSlice = createSlice({
         state.users.push(...action.payload);
         state.hasMore =
           action.payload.length > 0 && action.payload.length === 9;
-        state.page++;
       })
       .addCase(updateUserById.fulfilled, (state, action) => {
         state.isLoading = false;
@@ -50,7 +52,8 @@ export const userSlice = createSlice({
 
 export default userSlice.reducer;
 
-export const { filterUsersByStatusSubscription } = userSlice.actions;
+export const { filterUsersByStatusSubscription, incrementPage } =
+  userSlice.actions;
 
 function isError(action: AnyAction) {
   return action.type.endsWith("rejected");

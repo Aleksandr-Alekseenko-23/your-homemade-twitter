@@ -13,9 +13,9 @@ import storage from "redux-persist/lib/storage";
 import UsersReducer from "./slice";
 
 const persistConfig = {
-  key: "lang",
+  key: "users",
   storage: storage,
-  whitelist: ["language"],
+  whitelist: ["users", "filter", "page", "hasMore"],
 };
 
 const persistedReducer = persistReducer(persistConfig, UsersReducer);
