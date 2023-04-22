@@ -8,6 +8,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { persistor } from "./redux/store";
 import GlobalStyles from "./utils/globalStyle/globalStyle";
 import Loader from "./components/Common/Loader/Loader";
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

@@ -1,0 +1,11 @@
+@import-normalize;
+
+.custom-class {
+  background: #6610f2;
+  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: aquamarine;
+}

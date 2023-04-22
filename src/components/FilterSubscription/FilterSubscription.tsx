@@ -3,10 +3,8 @@ import { useAppDispatch, useAppSelector } from "../../redux/hook";
 import { filterUsersByStatusSubscription } from "../../redux/slice";
 import { Filter } from "../../utils/types/types";
 import { selectFilterUsers } from "../../redux/selectors";
-import {
-  StyledDropdownButton,
-  StyledDropdownItem,
-} from "./FilterSubscription.styled";
+import { DropdownButton } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 
 const FilterSubscription: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -18,17 +16,21 @@ const FilterSubscription: React.FC = () => {
   };
 
   return (
-    <StyledDropdownButton id="dropdown-basic-button" title={filter}>
-      <StyledDropdownItem onClick={() => handleFilterChange("all")}>
+    <DropdownButton
+      id="dropdown-basic-button"
+      title={filter}
+      bsPrefix="custom-class"
+    >
+      <Dropdown.Item onClick={() => handleFilterChange("all")}>
         All
-      </StyledDropdownItem>
-      <StyledDropdownItem onClick={() => handleFilterChange("follow")}>
+      </Dropdown.Item>
+      <Dropdown.Item onClick={() => handleFilterChange("follow")}>
         Follow
-      </StyledDropdownItem>
-      <StyledDropdownItem onClick={() => handleFilterChange("following")}>
+      </Dropdown.Item>
+      <Dropdown.Item onClick={() => handleFilterChange("following")}>
         Following
-      </StyledDropdownItem>
-    </StyledDropdownButton>
+      </Dropdown.Item>
+    </DropdownButton>
   );
 };
 

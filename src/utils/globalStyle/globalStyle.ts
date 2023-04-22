@@ -113,6 +113,8 @@ min-height: 100vh;
 .Link:focus {
   background-color: rgb(92, 211, 168);
 }
+
+
 `;
 
 export default GlobalStyles;
