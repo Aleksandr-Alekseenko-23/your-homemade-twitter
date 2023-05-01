@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import background from "../../assets/img/background.jpg";
 
 export const Text = styled.span`
   position: absolute;
@@ -13,13 +14,14 @@ export const Text = styled.span`
   color: #4611ba;
 `;
 
-export const Foto = styled.img`
-  text-align: center;
-`;
-
 export const Wrapper = styled.div`
   background-color: #1ca2eb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(${background});
+  width: 698px;
+  height: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;

@@ -9,13 +9,15 @@ import {
 
 export const fetchUsers = createAsyncThunk<
   User[],
-  Pagination,
+  Pagination & { filter: string },
   { rejectValue: string }
->("users/fetchUsers", async ({ page, limit }, { rejectWithValue }) => {
-  const data = await getUsers({ page, limit });
+>("users/fetchUsers", async ({ page, limit, filter }, { rejectWithValue }) => {
+  const data = await getUsers({ page, limit, filter });
+
   if (!data) {
     return rejectWithValue("Server Error!");
   }
+
   return data;
 });
 

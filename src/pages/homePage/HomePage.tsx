@@ -1,13 +1,11 @@
 import React from "react";
-import { Text, Wrapper, Foto } from "./HomePage.styled";
-import background from "../../assets/img/background.jpg";
+import { Text, Wrapper } from "./HomePage.styled";
 
 const HomePage: React.FC = () => {
   return (
     <>
       <Wrapper>
         <Text> Your homemade twitter</Text>
-        <Foto src={background} />
       </Wrapper>
     </>
   );

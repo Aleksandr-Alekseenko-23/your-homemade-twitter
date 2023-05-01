@@ -7,7 +7,11 @@ export interface User {
   subscription: boolean;
 }
 
-export type Filter = "all" | "follow" | "following";
+export type Filter = "All" | "Follow" | "Followings";
+
+export interface FilterProps {
+  getValueFilter: () => void;
+}
 
 export interface UserState {
   users: User[];
@@ -47,4 +51,8 @@ export interface Links {
   id: string;
   label: string;
   path: string;
+}
+
+export interface PropsStyledMain {
+  location: string;
 }

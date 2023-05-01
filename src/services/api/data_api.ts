@@ -8,13 +8,33 @@ const instance = axios.create({
 export const getUsers = async ({
   page,
   limit,
-}: Pagination): Promise<User[]> => {
+  filter,
+}: Pagination & { filter: string }): Promise<User[]> => {
+  let subscription;
+  switch (filter) {
+    case "All":
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      subscription;
+      break;
+    case "Follow":
+      subscription = false;
+      break;
+    case "Followings":
+      subscription = true;
+      break;
+
+    default:
+      break;
+  }
+
   const { data }: AxiosResponse<User[]> = await instance.get("/users", {
     params: {
       page,
       limit,
+      subscription,
     },
   });
+
   return data;
 };
 
@@ -23,5 +43,6 @@ export const updateUser = async (user: User): Promise<User> => {
     `/users/${user.id}`,
     user
   );
+
   return data;
 };

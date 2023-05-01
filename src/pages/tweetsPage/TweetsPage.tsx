@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Alert, AlertTitle } from "@mui/material";
 import UserList from "../../components/User/UserList/UserList";
 import Section from "../../components/Common/Section/Section";
@@ -6,33 +6,37 @@ import Container from "../../components/Common/Container/Container";
 import Loader from "../../components/Common/Loader/Loader";
 import Button from "../../components/Common/Button/Button";
 import { useAppDispatch, useAppSelector } from "../../redux/hook";
-import {
-  selectFilteredUsers,
-  selectIsLoading,
-  selectError,
-  selectPage,
-  selectHasMore,
-} from "../../redux/selectors";
+import { selectUsers } from "../../redux/selectors";
 import { fetchUsers } from "../../redux/operations";
-import { Wrapper } from "./TweetsPage.styled";
+import { Wrapper, StyledWrapper } from "./TweetsPage.styled";
 import { incrementPage } from "../../redux/slice";
+import FilterSubscription from "../../components/FilterSubscription/FilterSubscription";
+import { Filter } from "../../utils/types/types";
+import ButtonGoBack from "../../components/Common/ButtonGoBack/ButtonGoBack";
 
 const TweetsPage: React.FC = () => {
-  const users = useAppSelector(selectFilteredUsers);
-  const isLoading = useAppSelector(selectIsLoading);
-  const error = useAppSelector(selectError);
-  const currentPage = useAppSelector(selectPage);
-  const hasMore = useAppSelector(selectHasMore);
+  const { users, isLoading, error, filter, page, hasMore } =
+    useAppSelector(selectUsers);
+
+  const [currentPage, setCurrentPage] = useState<number>(page);
+  const [currentValueFilter, setCurrentValueFilter] = useState<Filter>(filter);
 
   const dispatch = useAppDispatch();
 
   const handleLoadMore = (): void => {
     dispatch(incrementPage());
+    setCurrentPage((PrevCurrentPage) => PrevCurrentPage + currentPage);
+  };
+
+  const getValueFilter = (): void => {
+    setCurrentValueFilter((PrevValue) => PrevValue);
   };
 
   useEffect(() => {
-    dispatch(fetchUsers({ page: currentPage, limit: 9 }));
-  }, [currentPage, dispatch]);
+    if (currentValueFilter !== filter || page !== currentPage) {
+      dispatch(fetchUsers({ page, limit: 9, filter }));
+    }
+  }, [currentPage, filter, dispatch, currentValueFilter, page]);
 
   return (
     <>
@@ -52,7 +56,13 @@ const TweetsPage: React.FC = () => {
                 Users not found
               </Alert>
             )}
-            {users.length > 0 && <UserList users={users} />}
+            <>
+              <StyledWrapper>
+                <ButtonGoBack />
+                <FilterSubscription getValueFilter={getValueFilter} />
+              </StyledWrapper>
+              {users.length > 0 && <UserList users={users} />}
+            </>
             {hasMore && (
               <Wrapper>
                 <Button

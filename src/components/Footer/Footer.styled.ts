@@ -2,11 +2,16 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
   flex-shrink: 0;
-  border-top: 1px solid rgba(236, 236, 236, 1);
-  background-color: #fdf7f2;
+  background: linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  );
+  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   display: flex;
   padding-top: 5px;
-  min-height: 80px;
+  min-height: 64px;
 `;
 
 export const Wrapper = styled.div`
