@@ -4,7 +4,7 @@ import background from "../../assets/img/background.jpg";
 export const Text = styled.span`
   position: absolute;
   top: 150px;
-  left: 385px;
+  left: 420px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   background-color: #1ca2eb;
   background-image: url(${background});
   width: 698px;
-  height: 620px;
+  height: 698px;
   margin-left: auto;
   margin-right: auto;
   background-size: cover;
