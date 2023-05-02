@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/your-homemade-twitter/static/css/main.92a72fd8.css",
-    "main.js": "/your-homemade-twitter/static/js/main.d53c0eed.js",
+    "main.js": "/your-homemade-twitter/static/js/main.25361e63.js",
     "static/js/369.cd8d4f85.chunk.js": "/your-homemade-twitter/static/js/369.cd8d4f85.chunk.js",
     "static/js/440.3eeea045.chunk.js": "/your-homemade-twitter/static/js/440.3eeea045.chunk.js",
     "static/js/296.7b926dcc.chunk.js": "/your-homemade-twitter/static/js/296.7b926dcc.chunk.js",
@@ -13,13 +13,13 @@
     "index.html": "/your-homemade-twitter/index.html",
     "static/media/linkedin.svg": "/your-homemade-twitter/static/media/linkedin.0e77d333288bbfc0f3c0a9a4603b0925.svg",
     "main.92a72fd8.css.map": "/your-homemade-twitter/static/css/main.92a72fd8.css.map",
-    "main.d53c0eed.js.map": "/your-homemade-twitter/static/js/main.d53c0eed.js.map",
+    "main.25361e63.js.map": "/your-homemade-twitter/static/js/main.25361e63.js.map",
     "369.cd8d4f85.chunk.js.map": "/your-homemade-twitter/static/js/369.cd8d4f85.chunk.js.map",
     "440.3eeea045.chunk.js.map": "/your-homemade-twitter/static/js/440.3eeea045.chunk.js.map",
     "296.7b926dcc.chunk.js.map": "/your-homemade-twitter/static/js/296.7b926dcc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92a72fd8.css",
-    "static/js/main.d53c0eed.js"
+    "static/js/main.25361e63.js"
   ]
 }
